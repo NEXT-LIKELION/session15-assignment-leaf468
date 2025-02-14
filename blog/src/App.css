@@ -1,0 +1,178 @@
+/* 1) 전체 페이지 기본 설정 */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f6f8fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 2) 컨테이너 (중앙 정렬, 적절한 크기 유지) */
+.container {
+  max-width: 800px; /* 기존 600px에서 확장 */
+  width: 90%;
+  min-width: 500px; /* 지나치게 좁아지는 것 방지 */
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* 3) 페이지 타이틀 */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* 4) 버튼 컨테이너 */
+.actions, .action-buttons {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* 5) 기본 버튼 스타일 */
+.btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2e86de;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #1b5bbf;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* 6) 삭제 버튼 (빨간색) */
+.btn-delete {
+  background-color: #c0392b;
+}
+
+.btn-delete:hover {
+  background-color: #a83225;
+}
+
+/* 7) 게시글 목록 */
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #e4e4e4;
+  transition: background-color 0.1s ease;
+}
+
+/* 목록 hover 시 배경 강조 */
+.post-item:hover {
+  background-color: #fcfcfc;
+}
+
+/* 게시글 링크 */
+.post-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 글 제목 */
+.post-item strong {
+  font-size: 20px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* 8) 폼 스타일 (수정 페이지도 동일한 스타일 적용) */
+.form-container {
+  max-width: 800px;
+  width: 90%;
+  min-width: 500px; /* 최소 크기 설정 */
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* 폼 타이틀 */
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* 폼 그룹 (입력 필드) */
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+/* 라벨 */
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* 인풋 & 텍스트에어리어 */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2e86de;
+  box-shadow: 0 0 5px rgba(46, 134, 222, 0.3);
+}
+
+/* 텍스트에어리어 크기 조절 */
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* 폼 버튼 영역 */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* 반응형 (작은 화면에서도 적절한 크기 유지) */
+@media (max-width: 768px) {
+  .container, .form-container {
+    width: 95%;
+    padding: 24px;
+  }
+}
